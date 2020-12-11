@@ -15,3 +15,7 @@ Newslet will display up-to-date top headlines in the news from various publicati
 <p>Built With: HTML, CSS, Bootstrap, Javascript</p>
 <img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/118854279/original/522283446db3c2f2f47865aeb3191a857b0a2baf/design-websites-with-html-css-javascript-bootstrap.png" height="200" width="400"/>
 <p>Contributors: Leesel Fraser & Zipporah Najar</p>
+|Contributor |Github | Linkedin | 
+|:--- |:---- |:----:|
+|1. Leesel| <a href="github.com/leesel">Github</a> | <a href="linkedin.com/in/leesel">Linkedin</a> |
+|2. Zipporah| left | nicely |
