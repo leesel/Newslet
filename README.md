@@ -13,5 +13,5 @@ Newslet will display up-to-date top headlines in the news from various publicati
     <li><a href="https://api.adviceslip.com/" target="_blank">AdviceSlip API</a></li>
   </ul>
 <p>Built With: HTML, CSS, Bootstrap, Javascript</p>
-<img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/118854279/original/522283446db3c2f2f47865aeb3191a857b0a2baf/design-websites-with-html-css-javascript-bootstrap.png" height="200" width="400"/>
+<img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/121701034/original/11ad7a38e42c95aa6b8b22d4cad928d8b4ad5544/make-your-website-design-using-html5-css3-bootstrap-and-js.png" height="200" width="400"/>
 <p>Contributors: Leesel Fraser & Zipporah Najar</p>
