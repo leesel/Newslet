@@ -14,5 +14,5 @@ Newslet will display up-to-date top headlines in the news from various publicati
   </ul>
 <p>Built With: HTML, CSS, Bootstrap, Javascript</p>
 <img src="https://www.pngitem.com/pimgs/m/519-5194865_html-css-js-html-5-hd-png-download.png" height="200" width="400"/>
-<img src="https://miro.medium.com/max/1206/1*KWBfLD6aEEHNWyuYmL2CVw.png" height="200" width="400"/>
+<img src="https://miro.medium.com/max/1206/1*KWBfLD6aEEHNWyuYmL2CVw.png" height="200" width="250"/>
 <p>Contributors: Leesel Fraser & Zipporah Najar</p>
