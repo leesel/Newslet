@@ -18,5 +18,5 @@ Newslet will display up-to-date top headlines in the news from various publicati
 
 | Contributor | Github | Linkedin | 
 |:--- |:---- |:----:|
-|1. Leesel | <a href="github.com/leesel">Github</a> | <a href="linkedin.com/in/leesel">Linkedin</a> |
-|2. Zipporah| <a href="github.com/zeita101">Github</a> | <a href="linkedin.com/">Linkedin</a> |
+|1. Leesel | <a href="github.com/leesel" target="_blank">Github</a> | <a href="linkedin.com/in/leesel" target="_blank">Linkedin</a> |
+|2. Zipporah| <a href="github.com/zeita101" target="_blank">Github</a> | <a href="linkedin.com/" target="_blank">Linkedin</a> |
