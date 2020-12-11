@@ -13,3 +13,4 @@ Newslet will display up-to-date top headlines in the news from various publicati
     <li><a href="https://api.adviceslip.com/" target="_blank">AdviceSlip API</a></li>
   </ul>
 <p>Built With: HTML, CSS, Bootstrap, Javascript</p>
+<p>Contributors: Leesel Fraser & Zipporah Najar</p>
