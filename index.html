@@ -53,7 +53,7 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <!-- <img src="img/gif/purp.gif" alt="image 1"> -->
-                <video src="img/purpleclouds.mp4" autoplay  type="video/mp4"></video>
+                <video src="img/vid/purpleclouds.mp4" autoplay  type="video/mp4"></video>
                 <div class=carousel-caption>
                     <h1 class="display-2">Live Weather</h1>
                     <!-- <iframe src="http://free.timeanddate.com/clock/i7l01vax/n179/tt0" frameborder="0" width="340" height="18"></iframe> -->
@@ -64,19 +64,19 @@
                     <div class="container-fluid padding">
                         <div class="row text-center padding">
                             <div class="col-xs-12 col-sm-6 col-md-4">
-                                <i class="fas fa-cloud"></i>
+                                <i class="fas fa-cloud" id="weather_icon_1"></i>
                                 <h3 id="weather_temp">45℃</h3>
-                                <p id="weather_desc">Slightly Cloudy.</p>
+                                <p id="weather_desc">slightly cloudy.</p>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-4">
-                                <i class="fas fa-chevron-up"></i>
+                                <i class="fas fa-chevron-up" id="weather_icon_2"></i>
                                 <h3 id="weather_high">60℃</h3>
-                                <p>Highest temp.</p>
+                                <p id="weather_high_desc">highest</p>
                             </div>
                             <div class="col-sm-12 col-md-4">
-                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-chevron-down" id="weather_icon_3"></i>
                                 <h3 id="weather_low">30℃</h3>
-                                <p>Lowest temp.</p>
+                                <p id="weather_low_desc">lowest</p>
                             </div>
                         </div>
                         <hr class="my-4">
@@ -102,7 +102,7 @@
                 <p class="lead">Newslet brings you all of your news at once without having to go through plentiful different tabs of different news publications. We bring you all your news and their exact links in one place. Always updated, always on time.</p>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-                <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg">Button</button></a>
+                <a href="#"><button onclick="topNews()" type="button" class="btn btn-outline-secondary btn-lg">Check it out</button></a>
             </div>
         </div>
     </div>
@@ -146,7 +146,7 @@
     <div class="container-fluid padding">
         <div class="row padding">
             <div class="col-md-12 col-lg-6">
-                <h2>When we built it...</h2>
+                <h2>Why we built it...</h2>
                 <p>Our team knew that the news we consume is so diverse and some reports and big stories can get repetitive. Why open WSJ to read an article that you just read about in the NYT?</p>
                 <p>we didnt want users to have to struggle to get to the right page or choose which source they wanted. so we figured why not bring all the news to them in an organized way?</p>
                 <p> thus, we created an easier way to get our news quickly and in a fun way! Make sure you grab some advice, below!</p>
@@ -300,7 +300,8 @@
             </div>
         </div>
         <!-- Two Column Section -->
-        <div class="container-fluid padding">
+        <div id="article-container"></div>
+        <!-- <div class="container-fluid padding">
             <div class="row padding">
                 <div class="col-md-12 col-lg-6">
                     <h2 class="for-news" id="article-title"></h2>
@@ -316,7 +317,7 @@
                 </div>
             </div>
             <hr class="my-4">
-        </div>
+        </div> -->
     </container>
     <!-- End of News Section -->
 
