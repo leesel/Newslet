@@ -96,16 +96,16 @@ textarea.question + label {
 
 /* Change color of text in search bar*/
 input.question {
-    color: #d6bfbf; /*5e5a5a*/
+    color: #c0939f; /*5e5a5a*/
 }
 .fa-cloud {
-    color: #bc949e; #90a4b8
+    color: #bc949e; /*#90a4b8*/
 }
 .fa-chevron-up {
-    color: #bc949e; #c2a0a0
+    color: #bc949e; /*#c2a0a0*/
 }
 .fa-chevron-down {
-    color: #bc949e; #996262
+    color: #bc949e; /*#996262*/
 }
 .fa-newspaper{
     color: #986161;
