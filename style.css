@@ -180,7 +180,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background: #EEE;
+  background: #336acf;
 }
 
 input[type="submit"]:active {
