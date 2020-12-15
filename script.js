@@ -6,19 +6,20 @@ function showHome () {
 }
 window.onload=function(){
     showHome();
-    // hideWeatherIcons();
 }
-// function hideWeatherIcons (){
-//     document.getElementById("weather_icon_1").innerHTML = '';
-//     document.getElementById("weather_icon_2").innerHTML = '';
-//     document.getElementById("weather_icon_3").innerHTML = '';
-//     document.getElementById("weather_temp").innerHTML = '';
-//     document.getElementById("weather_desc").innerHTML = '';
-//     document.getElementById("weather_high").innerHTML = '';
-//     document.getElementById("weather_low").innerHTML = '';
-//     document.getElementById("weather_high_desc").innerHTML = '';
-//     document.getElementById("weather_low_desc").innerHTML = '';
-// }
+function getWeather () {
+    let input = document.getElementById("weather_city");
+    fetch('https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=imperial&appid=30980c7da4d8d22a89ed72ffa3b24226', {headers:new Headers({"X-Requested-With":"Leesel"})})
+    .then(a => a.json())
+    .then(response =>{
+        document.getElementById("weather_temp").innerText = Math.floor(response.main.temp) + '℉';
+        document.getElementById("weather_high").innerText = Math.floor(response.main.temp_max) + '℉';
+        document.getElementById("weather_low").innerText = Math.floor(response.main.temp_min) + '℉';
+        document.getElementById("weather_desc").innerText = response.weather[0].description;
+        document.getElementById("weather_city").value = '';
+        console.log(response);
+    })
+}
 function topNews () {
     document.getElementById('news-title').innerText = 'Top Stories';
     document.getElementById('news-desc').innerText = 'Your daily rundown: the most important news stories of the day';
@@ -27,7 +28,6 @@ function topNews () {
     fetch('https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=us&apikey=b9e7d883cff44ecea7551d1729518768', {headers:new Headers({"X-Requested-With":"Leesel"})})
     .then(a => a.json())
     .then(response =>{
-
         // document.getElementById('news-img').src = response.articles[1].urlToImage;
         // document.getElementById('article-title').innerText = response.articles[1].title;
         // document.getElementById('article-auth').innerText = response.articles[1].author;
@@ -43,6 +43,30 @@ function topNews () {
 //global news : http://newsapi.org/v2/top-headlines?language=en&apikey=b9e7d883cff44ecea7551d1729518768
 // add date to data fetched
 // add logic to onliy show if !null && !undefined
+
+function sportsNews () {
+    document.getElementById('news-title').innerText = 'Sports News';
+    document.getElementById('news-desc').innerText = 'Shoot through the latest sports headlines.';
+    document.getElementById('homepage').style.display = 'none';
+    document.getElementById('news').style.display = 'block';
+    document.getElementById('article-container').innerHTML = '';
+    fetch('https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=us&category=sports&apikey=b9e7d883cff44ecea7551d1729518768', {headers:new Headers({"X-Requested-With":"Leesel"})})
+    .then(a => a.json())
+    .then(response =>{
+        // document.getElementById('news-img').src = response.articles[1].urlToImage;
+        // document.getElementById('article-title').innerText = response.articles[1].title;
+        // document.getElementById('article-auth').innerText = response.articles[1].author;
+        // document.getElementById('article-src').innerText = response.articles[1].source.name;
+        // document.getElementById('article-date').innerText = response.articles[1].publishedAt;
+        // document.getElementById('article-desc').innerText = response.articles[1].description;
+        // document.getElementById('article-url').innerText = response.articles[1].url;
+        // console.log(response);
+        for(let i = 0 ; i< response.articles.length; i++){
+            renderArticleTemplate(response.articles[i]);
+        }
+    })
+}
+
 function techNews () {
     document.getElementById('news-title').innerText = 'Tech News';
     document.getElementById('news-desc').innerText = 'Updates on the latest tech trends, software, hardware, and games.';
@@ -64,28 +88,7 @@ function techNews () {
         }
     })
 }
-function sportsNews () {
-    document.getElementById('news-title').innerText = 'Sports News';
-    document.getElementById('news-desc').innerText = 'Latest sports news headlines from around the world.';
-    document.getElementById('homepage').style.display = 'none';
-    document.getElementById('news').style.display = 'block';
-    document.getElementById('article-container').innerHTML = '';
-    fetch('https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=us&category=sports&apikey=b9e7d883cff44ecea7551d1729518768', {headers:new Headers({"X-Requested-With":"Leesel"})})
-    .then(a => a.json())
-    .then(response =>{
-        // document.getElementById('news-img').src = response.articles[1].urlToImage;
-        // document.getElementById('article-title').innerText = response.articles[1].title;
-        // document.getElementById('article-auth').innerText = response.articles[1].author;
-        // document.getElementById('article-src').innerText = response.articles[1].source.name;
-        // document.getElementById('article-date').innerText = response.articles[1].publishedAt;
-        // document.getElementById('article-desc').innerText = response.articles[1].description;
-        // document.getElementById('article-url').innerText = response.articles[1].url;
-        // console.log(response);
-        for(let i = 0 ; i< response.articles.length; i++){
-            renderArticleTemplate(response.articles[i]);
-        }
-    })
-}
+
 function entNews () {
     document.getElementById('news-title').innerText = 'Entertainment News';
     document.getElementById('news-desc').innerText = 'The juiciest stories on all your fave celebs.';
@@ -107,6 +110,7 @@ function entNews () {
         }
     })
 }
+
 function healthNews () {
     document.getElementById('news-title').innerText = 'Health News';
     document.getElementById('news-desc').innerText = 'Power up with the latest medical discoveries, breakthroughs and reports.';
@@ -145,27 +149,6 @@ function getAdvice () {
         document.getElementById("advice").innerText = response.slip.advice;
     })
 }
-
-function getWeather () {
-    let input = document.getElementById("weather_city");
-    fetch('https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=imperial&appid=30980c7da4d8d22a89ed72ffa3b24226', {headers:new Headers({"X-Requested-With":"Leesel"})})
-    .then(a => a.json())
-    .then(response =>{
-        document.getElementById("weather_temp").innerText = Math.floor(response.main.temp) + '℉';
-        document.getElementById("weather_high").innerText = Math.floor(response.main.temp_max) + '℉';
-        document.getElementById("weather_low").innerText = Math.floor(response.main.temp_min) + '℉';
-        document.getElementById("weather_desc").innerText = response.weather[0].description;
-        document.getElementById("weather_city").value = '';
-        // console.log(response);
-    })
-}
-
-// blue open part isnt showing up anymore :(
-// hamburger menu not working
-// need to make weather form responsive on different screen sizes
-// change fa weather icon based on weather desc?
-
-// make another function for creating the divs for the responses from api (image, url, etc) 
 
 const renderArticleTemplate = (article) => {
             // return 
@@ -209,3 +192,10 @@ const renderArticleTemplate = (article) => {
 // for(let i = 0 ; i< response.articles.length; i++){
 //     newsContainer.appendChild(renderArticleTemplate(response.articles[i]));
 // }
+
+// blue open part isnt showing up anymore :(
+// hamburger menu not working
+// need to make weather form responsive on different screen sizes
+// change fa weather icon based on weather desc?
+
+// make another function for creating the divs for the responses from api (image, url, etc) 
