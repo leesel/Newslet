@@ -53,14 +53,16 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <!-- <img src="img/gif/purp.gif" alt="image 1"> -->
-                <video src="img/vid/purpleclouds.mp4" autoplay  type="video/mp4"></video>
+                <video src="img/vid/purpleclouds.mp4" autoplay loop type="video/mp4"></video>
                 <div class=carousel-caption>
                     <h1 class="display-2">Live Weather</h1>
                     <!-- <iframe src="http://free.timeanddate.com/clock/i7l01vax/n179/tt0" frameborder="0" width="340" height="18"></iframe> -->
+                   
                     <div id="weather_form">
                         <input type="text" name="name" class="question" id="weather_city" placeholder="What's your city?" required autocomplete="off" />
                         <input type="submit" value="Submit" onclick="getWeather()" id="weather_submit"class="btn btn-primary btn-lg"/>
                     </div>
+                    
                     <div class="container-fluid padding">
                         <div class="row text-center padding">
                             <div class="col-xs-12 col-sm-6 col-md-4">
@@ -174,7 +176,7 @@
         <div class="container-fluid padding">
             <div class="row text-center">
                 <div class="col-12">
-                    <h2 id="advice">Advice</h2>
+                    <h2 id="advice"></h2>
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <img src="img/gif/panda.gif" alt="gif" class="gif">
@@ -328,26 +330,25 @@
                 <div class="col-md-4">
                     <img src="img/logo.png" alt="logo">
                     <hr class="light">
-                    <p>555-555-5555</p>
-                    <p>email@myemail.com</p>
-                    <p>100 Street Name</p>
-                    <p>New York, NY, 00000</p>
+                    <p>About Us</p>
+                    <p>Contact</p>
+                    <p>FAQ</p>
                 </div>
                 <div class="col-md-4">
                     <hr class="light">
                     <h5>Donate</h5>
                     <hr class="light">
-                    <p><a href="https://www.theknowledgehouse.org/donate/">The Knowledge House</a></p>
-                    <p>Saturday: 10am - 4pm</p>
-                    <p>Sunday: closed</p>
+                    <p><a href="https://www.theknowledgehouse.org/donate/" target="_blank">Our Education</a></p>
+                    <p>Ko-Fi Donation</p>
+                    <p>Send Us A Tip</p>
                 </div>
                 <div class="col-md-4">
                     <hr class="light">
-                    <h5>News Categories</h5>
+                    <h5>Categories & Features</h5>
                     <hr class="light">
                     <p>Top Headlines</p>
                     <p>Advice & Emoji</p>
-                    <p>Sports</p>
+                    <!-- <p>Sports</p> -->
                     <p>Weather by City</p>
                 </div>
                 <div class="col-12">
