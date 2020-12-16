@@ -40,7 +40,7 @@ function topNews () {
         }
     })
 }
-//global news : http://newsapi.org/v2/top-headlines?language=en&apikey=b9e7d883cff44ecea7551d1729518768
+// global news : http://newsapi.org/v2/top-headlines?language=en&apikey=b9e7d883cff44ecea7551d1729518768
 // add date to data fetched
 // add logic to onliy show if !null && !undefined
 
@@ -53,13 +53,6 @@ function sportsNews () {
     fetch('https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=us&category=sports&apikey=b9e7d883cff44ecea7551d1729518768', {headers:new Headers({"X-Requested-With":"Leesel"})})
     .then(a => a.json())
     .then(response =>{
-        // document.getElementById('news-img').src = response.articles[1].urlToImage;
-        // document.getElementById('article-title').innerText = response.articles[1].title;
-        // document.getElementById('article-auth').innerText = response.articles[1].author;
-        // document.getElementById('article-src').innerText = response.articles[1].source.name;
-        // document.getElementById('article-date').innerText = response.articles[1].publishedAt;
-        // document.getElementById('article-desc').innerText = response.articles[1].description;
-        // document.getElementById('article-url').innerText = response.articles[1].url;
         // console.log(response);
         for(let i = 0 ; i< response.articles.length; i++){
             renderArticleTemplate(response.articles[i]);
@@ -76,13 +69,6 @@ function techNews () {
     fetch('https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=us&category=technology&apikey=b9e7d883cff44ecea7551d1729518768', {headers:new Headers({"X-Requested-With":"Leesel"})})
     .then(a => a.json())
     .then(response =>{
-        // document.getElementById('news-img').src = response.articles[1].urlToImage;
-        // document.getElementById('article-title').innerText = response.articles[1].title;
-        // document.getElementById('article-auth').innerText = response.articles[1].author;
-        // document.getElementById('article-src').innerText = response.articles[1].source.name;
-        // document.getElementById('article-date').innerText = response.articles[1].publishedAt;
-        // document.getElementById('article-desc').innerText = response.articles[1].description;
-        // document.getElementById('article-url').innerText = response.articles[1].url;
         for(let i = 0 ; i< response.articles.length; i++){
             renderArticleTemplate(response.articles[i]);
         }
@@ -98,13 +84,6 @@ function entNews () {
     fetch('https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=us&category=entertainment&apikey=b9e7d883cff44ecea7551d1729518768', {headers:new Headers({"X-Requested-With":"Leesel"})})
     .then(a => a.json())
     .then(response =>{
-        // document.getElementById('news-img').src = response.articles[1].urlToImage;
-        // document.getElementById('article-title').innerText = response.articles[1].title;
-        // document.getElementById('article-auth').innerText = response.articles[1].author;
-        // document.getElementById('article-src').innerText = response.articles[1].source.name;
-        // document.getElementById('article-date').innerText = response.articles[1].publishedAt;
-        // document.getElementById('article-desc').innerText = response.articles[1].description;
-        // document.getElementById('article-url').innerText = response.articles[1].url;
         for(let i = 0 ; i< response.articles.length; i++){
             renderArticleTemplate(response.articles[i]);
         }
@@ -120,13 +99,6 @@ function healthNews () {
     fetch('https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=us&category=health&apikey=b9e7d883cff44ecea7551d1729518768', {headers:new Headers({"X-Requested-With":"Leesel"})})
     .then(a => a.json())
     .then(response =>{
-        // document.getElementById('news-img').src = response.articles[1].urlToImage;
-        // document.getElementById('article-title').innerText = response.articles[1].title;
-        // document.getElementById('article-auth').innerText = response.articles[1].author;
-        // document.getElementById('article-src').innerText = response.articles[1].source.name;
-        // document.getElementById('article-date').innerText = response.articles[1].publishedAt;
-        // document.getElementById('article-desc').innerText = response.articles[1].description;
-        // document.getElementById('article-url').innerText = response.articles[1].url;
         // create a template for displaying one item... with all the same elements ^...
         // function that returns the template with the variable value in it
 
@@ -199,3 +171,4 @@ const renderArticleTemplate = (article) => {
 // change fa weather icon based on weather desc?
 
 // make another function for creating the divs for the responses from api (image, url, etc) 
+//https://momentjs.com/
